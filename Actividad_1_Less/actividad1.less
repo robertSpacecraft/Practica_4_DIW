@@ -1,0 +1,54 @@
+//Variables
+@color-fondo: #333;
+@color-texto: #ffffff;
+@color-fondo-hover: lighten(@color-fondo, 20%);
+@color-texto-hover: #222;
+
+@padding-vertical: 0.8rem;
+@padding-horizontal: 1.5rem;
+
+//Mixins
+.reset-list() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.transition-hover() {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+//Estilos título
+.titulo {
+    color: @color-fondo;
+    text-align: center;
+    margin: 2rem 0;
+    font-family: Arial, sans-serif;
+}
+
+
+//Estilos anidados
+.navMenu {
+    background-color: @color-fondo;
+
+    .listaMenu {
+        .reset-list();
+        display: flex;
+        justify-content: space-evenly;
+
+        li {
+            a {
+                display: block;
+                padding: @padding-vertical @padding-horizontal;
+                color: @color-texto;
+                text-decoration: none;
+                .transition-hover();
+
+                &:hover {
+                    background-color: @color-fondo-hover;
+                    color: @color-texto-hover;
+                }
+            }
+        }
+    }
+}
