@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actividad 4 - Perfil social con Bootstrap</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light">
+
+
+  <!--Nav-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+        <img src="img/logo-socialprofile.png" alt="Logo" width="28" height="28" class="rounded" />
+        SocialProfile
+      </a>
+
+      <!-- Botón hamburguesa para la versión móvil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+        aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces del menú -->
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#perfil">Perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publicaciones">Publicaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Contenedor principal-->
+  <main class="container my-4">
+
+
+    <!--Perfil-->
+
+    <section id="perfil" class="card shadow-sm">
+      <div class="card-body">
+        <div class="row g-4 align-items-center">
+
+          <!--Foto-->
+          <div class="col-12 col-md-4 col-lg-3 text-center">
+            <img
+              src="img/avatar-roberto.png"
+              alt="Foto de perfil de Roberto"
+              class="img-fluid rounded-circle border border-3 border-white shadow"
+              style="max-width: 180px;"
+            />
+          </div>
+
+          <!--Datos-->
+          <div class="col-12 col-md-8 col-lg-9">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+              <div>
+                <h1 class="h3 mb-1 fw-bold">Roberto Amorós</h1>
+                <p class="text-muted mb-0">@robertoAmor</p>
+              </div>
+
+              <div class="d-flex gap-2">
+                <span class="badge text-bg-secondary px-3 py-2">Tecnología</span>
+                <span class="badge text-bg-secondary px-3 py-2">DAW</span>
+                <span class="badge text-bg-secondary px-3 py-2">Innovación</span>
+              </div>
+            </div>
+
+            <hr class="my-3" />
+
+            <h2 class="h6 text-uppercase text-muted mb-2">Biografía</h2>
+            <p class="mb-0">
+              Experto en calzado y actual agente de Innovación en Fabricación Avanzada e Industria Digital en INESCOP. También soy estudiante de un CSFP de DAW.
+              Apasionado de la ciencia y la tecnología.
+            </p>
+
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <a class="btn btn-sm btn-outline-dark" href="#publicaciones">Ver publicaciones</a>
+              <a class="btn btn-sm btn-dark" href="#contacto">Contactar</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--Publicaciones-->
+    <section id="publicaciones" class="mt-4">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="h5 mb-0 fw-bold">Publicaciones</h2>
+        <span class="badge text-bg-primary">Recientes</span>
+      </div>
+
+      <div class="row g-3">
+        <!--Posts-->
+        <div class="col-12 col-lg-6">
+          <article class="card h-100 shadow-sm">
+            <img src="img/post-01-react-spa.png" class="card-img-top" alt="Proyecto SPA con React + Vite" />
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-2">Avance del proyecto SPA con React + Vite</h3>
+              <p class="text-muted small mb-3">Proyecto final DWEC · un proyecto interesante para mis estudios de DAW</p>
+              <p class="mb-0">
+                Estructura por capas (api, services, models, components) y navegación con react-router-dom.
+                Objetivo: una app sólida, robusta y profesional pensanda para afrontar un proyecto real.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <article class="card h-100 shadow-sm">
+            <img src="img/post-02-automatizacion.png" class="card-img-top" alt="Automatización de tareas" />
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-2">Automatización para trabajar con más control</h3>
+              <p class="text-muted small mb-3">Productividad · Seguimiento y organización</p>
+              <p class="mb-0">
+                Ideas para reducir tareas manuales: recordatorios de seguimiento, control de conversaciones abiertas
+                y documentos semanales de estado con formato consistente.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12">
+          <article class="card shadow-sm">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="img/post-03-ui-less-sass.png"
+                  class="img-fluid h-100 w-100 object-fit-cover rounded-start"
+                  alt="Diseño de interfaces: LESS y SASS"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold mb-2">Diseño de interfaces: de LESS/SASS a Tailwind/Bootstrap</h3>
+                  <p class="text-muted small mb-3">Prácticas DIW · Preprocesadores y frameworks</p>
+                  <p class="mb-0">
+                    Menús con variables, mixins, funciones y responsive, y salto a frameworks para prototipar más rápido.
+                    La clave: orden, consistencia visual y adaptabilidad a móvil/tablet/escritorio.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--Proyectos destacados-->
+    <section id="proyectos" class="mt-4">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="h5 mb-0 fw-bold">Proyectos</h2>
+        <span class="badge text-bg-secondary">Selección</span>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-2">Aplicaciones web (JSP/Servlets)</h3>
+              <p class="mb-0 text-muted">
+                Prácticas con formularios, sesión (HttpSession) y vistas dinámicas, localStorage, etc.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-2">Bases de datos (SQL / MongoDB)</h3>
+              <p class="mb-0 text-muted">
+                Consultas, agregaciones y prácticas con Docker, con intención de dominar compose, imagens de docker, git y github.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-2">Scripting y herramientas</h3>
+              <p class="mb-0 text-muted">
+                Scripts con menús y control de permisos, y herramientas para organizar trabajo y reducir repetición de taréas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contacto-->
+    <section id="contacto" class="mt-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="h5 fw-bold mb-2">Contacto</h2>
+          <p class="text-muted mb-3">
+            En esta práctica el contacto es informativo.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white border rounded">
+                <p class="mb-1 fw-semibold">Correo</p>
+                <p class="mb-0 text-muted">ramoros@mail.es</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="p-3 bg-white border rounded">
+                <p class="mb-1 fw-semibold">Ubicación</p>
+                <p class="mb-0 text-muted">Monóvar / Alicante (España)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 d-flex gap-2">
+            <a href="#" class="btn btn-outline-dark btn-sm">LinkedIn</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">GitHub</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bootstrap JS (necesario para el navbar-toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

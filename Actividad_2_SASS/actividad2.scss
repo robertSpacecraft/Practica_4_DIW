@@ -1,0 +1,83 @@
+//Variables
+$color-fondo: #2c3e50;
+$color-texto: #ffffff;
+$color-borde: #1abc9c;
+
+$alto-menu: 3.5rem;
+$padding-horizontal: 1.5rem;
+
+//Número d elementos.
+$total-items: 3;
+
+//Funciones
+@function fondo-oscuro($color) {
+    @return darken($color, 12%);
+}
+
+//Mixins
+@mixin transicion-hover {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@mixin borde-inferior($activo: false) {
+    @if $activo {
+        border-bottom: 3px solid $color-borde;
+    }
+}
+
+//Placeholder
+%item-menu-base {
+    height: $alto-menu;
+    line-height: $alto-menu;
+    text-align: center;
+}
+
+//Estilos
+
+.titulo {
+    color: $color-fondo;
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 4rem;
+        height: 3px;
+        margin: 0.75rem auto 0;
+        background-color: $color-borde;
+    }
+}
+
+.navMenu2 {
+    background-color: $color-fondo;
+
+    .listaMenu2 {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            width: 100% / $total-items;
+
+            a {
+                @extend %item-menu-base;
+                display: block;
+                color: $color-texto;
+                text-decoration: none;
+                padding: 0 $padding-horizontal;
+                @include transicion-hover;
+
+                &:hover {
+                    background-color: fondo-oscuro($color-fondo);
+                    color: $color-borde;
+                    @include borde-inferior(true);
+                }
+            }
+        }
+    }
+}
